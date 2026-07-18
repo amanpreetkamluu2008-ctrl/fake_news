@@ -13,8 +13,6 @@ import streamlit as st
 
 
 df = pd.read_csv("train.csv")
-st.write("App started successfully")
-st.write(df.head())
 df = df.fillna(" ")
 df['content'] = df['author'] + " " + df['text']
 X = df['content'].values
